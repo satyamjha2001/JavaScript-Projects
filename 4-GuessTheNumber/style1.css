@@ -1,0 +1,108 @@
+/* General styles */
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* nav {
+  background-color: #161616;
+  padding: 10px;
+} */
+/* 
+nav a {
+  color: #fff;
+  margin-right: 20px;
+  text-decoration: none;
+} */
+
+#wrapper {
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  background-color: #161616;
+  color: #fff;
+  margin: 0;
+  padding: 20px 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Form and input styles */
+
+.form {
+  margin-bottom: 20px;
+}
+#guessField {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  font-size: 20px;
+  border: 5px solid #6c6d6d;
+  text-align: center;
+}
+
+button,
+#subt {
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  border-style: none;
+  margin-top: 20px;
+}
+button:hover,
+#subt:hover{
+  background-color: rgb(109, 203, 240);
+  color: blue;
+}
+
+/* Media queries for responsiveness */
+
+@media screen and (min-width: 480px) {
+  /* Adjustments for medium-sized screens */
+  body {
+    font-size: 18px;
+  }
+
+  #wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Adjustments for larger screens like tablets */
+  body {
+    font-size: 20px;
+  }
+
+  #wrapper {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Adjustments for desktop screens */
+  body {
+    font-size: 22px;
+  }
+
+  #wrapper {
+    max-width: 1200px;
+  }
+}
