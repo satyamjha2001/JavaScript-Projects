@@ -1,5 +1,5 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
-
+console.log(randomNumber);
 const submit = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
 const guessSlot = document.querySelector(".guesses");
@@ -34,7 +34,12 @@ function validateGuess(guess) {
     alert("This number is already guessed");
   } else {
     prevGuess.push(guess);
-    if (numGuess === 10) {
+    if (guess === randomNumber) {
+      displayGuess(guess);
+      displayMessage(`You guessed it right`);
+      endGame();
+    }
+    else if (numGuess === 10) {
       displayGuess(guess);
       displayMessage(`Game Over. Random number was ${randomNumber}`);
       endGame();
@@ -46,10 +51,7 @@ function validateGuess(guess) {
 }
 
 function checkGuess(guess) {
-  if (guess === randomNumber) {
-    displayMessage(`You guessed it right`);
-    endGame();
-  } else if (guess < randomNumber) {
+  if (guess < randomNumber) {
     displayMessage(`Number is TOOO low`);
   } else if (guess > randomNumber) {
     displayMessage(`Number is TOOO High`);
